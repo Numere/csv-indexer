@@ -20,7 +20,9 @@ Generation of the inverted index using the Apache Lucene library from a csv file
 
 Necessary dependencies for execution of code.
 
-### Lucene 
+### Lucene
+
+Engine generator of inverted index.
 
 ([Apache Lucene](http://lucene.apache.org/core/))
 
@@ -32,9 +34,11 @@ Necessary dependencies for execution of code.
 *   lucene-queryparser-4.4.0;
 *   lucene-suggest-4.4.0;
 
-Requisito mínimo: Lucene-3.2.0
+Minimum requisite: Lucene-3.2.0
 
 ### CSV File 
+
+File public District of Columbia regarding the purchase order in year of 2011.
 
 ([file.csv](http://data.octo.dc.gov/feeds/pass/archive/pass_2011_CSV.zip))
 

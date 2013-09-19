@@ -42,7 +42,7 @@ File public of the District of Columbia regarding the purchase order in year of 
 
 ##	Additional Information
 
-Para melhor entendimento do código e suas propriedades, sugerimos a leitura destes conceitos e utilizações.
+Para melhor entendimento do cï¿½digo e suas propriedades, sugerimos a leitura destes conceitos e utilizaï¿½ï¿½es.
 
 ### Fields
 
@@ -99,13 +99,13 @@ indexedFieldType.freeze();
 
 Existing many forms to visualizing the index, we suggest two distinct ways.
 
-### Viewing OLAP
+### Vision OLAP
 
 The tool Numete brings the vision OLAP. This tool can be added in a project java.
 
 *   [Numere](numere.stela.org.br)
 
-### Viewing the Data
+### Vision the Data
 
 The tool 'Luke' is used to visualizing the documents belonging to the index.
 

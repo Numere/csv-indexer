@@ -1,101 +1,79 @@
-#	CSV-INDEXER
+# CSV-Indexer
 
-Generation of the inverted index using the Apache Lucene library from a csv file.
+This project allows the generation of Lucene formatted indexes from a CSV file.
 
-##  How Start
+## Getting Started
 
-*   Download the sample project;
+### Requirements
 
-*   Download all dependencies;
+* Download this project;
+* Download the Apache Lucene library;
+* Download the 2011 Purchase Orders from the District of Columbia file (available at ([(http://data.octo.dc.gov/feeds/pass/archive/pass_2011_CSV.zip](http://data.octo.dc.gov/feeds/pass/archive/pass_2011_CSV.zip))).
 
-*   Download CSV file.
+### About Lucene indexing and field types
 
-##  Getting the code
+Lucene is a Java-based project that provides indexing and search technology, as well as spellchecking, hit highlighting and advanced analysis/tokenization capabilities. 
 
-*   git clone git@github.com:numere/csv-indexer.git
+Lucene can also be used for storing data as a schemaless structure, providing full text search (including fuzzy and approximation searches) over all the stored data.
 
-##  Dependencies
+Lucene offers specific field types for an optimized indexing and data retrieve process. The following points show some recommendations (based on Lucene indexing format) to store the data and to give faster retrieval:
 
-Necessary dependencies for execution of code.
+<dl>
+<dt>Text fields:</dt>
+<dd>Use a Field object;</dd>
+<dl>
+<dt>In case of stored fields:</dt>
+<dl>Enable term vector storing and indexing properties;</dl>
+<dl>Disable tokenizing and term vector position storing properties;</dl>
+</dl>
+<dl>
+<dt>Indexed fields:</dt>
+<dl>Enable term vector storing, term vector position storing, and indexing properties;</dl>
+<dl>Disable tokenizing and term storing properties;</dl>
+</dl>
+<dt>Numeric fields</dt>:
+** Use the specific-purpose field type:
+*** For 4-byte integers: IntField;
+*** For 8-byte integers: LongField;
+*** For 4-byte floats: FloatField;
+*** For 8-byte floats: DoubleField;
+* Use a Field for other types.
+</dl>
 
-### Lucene
+Based on these points, the creation of a stored text field can coded like this:
 
-Engine generator of inverted index.
+	FieldType storedFieldType = new FieldType();
+	
+	//Set to true if you want to save the value of the entire column
+	storedFieldType.setStored(true);
+	
+	//Set to true if this field's indexed form should be also stored into term vectors.
+	storedFieldType.setStoreTermVectors(true);
+	storedFieldType.setIndexed(true);
+	storedFieldType.setTokenized(false);
+	storedFieldType.freeze(); //for locking the changes
 
-([Apache Lucene](http://lucene.apache.org/core/))
+Also based on the previous points, the creation of a indexed text field can be coded like this: 
 
-*   lucene-analyzers-common;
-*   lucene-codecs;
-*   lucene-core;
-*   lucene-misc;
-*   lucene-queries;
-*   lucene-queryparser;
-*   lucene-suggest;
-
-Minimum requisite: Lucene-3.0.0
-
-### CSV File 
-
-File public of the District of Columbia regarding the purchase order in year of 2011.
-
-([file.csv](http://data.octo.dc.gov/feeds/pass/archive/pass_2011_CSV.zip))
-
-##	Additional Information
-
-For better understanding of the code and its properties, please read these concepts and uses.
-
-### Fields
-
-How to define fields in Lucene indexes?
-
-*   Text fields:
-    Use a Field object;
-    In case of stored fields:
-        Enable term vector storing and indexing properties;
-        Disable tokenizing and term vector position storing properties;
-    Indexed fields:
-        Enable term vector storing, term vector position storing, and indexing properties;
-        Disable tokenizing and term storing properties;
-*   Numeric fields:
-        Use the specific-purpose field type:
-            For 4-byte integers: IntField;
-            For 8-byte integers: LongField;
-            For 4-byte floats: FloatField;
-            For 8-byte floats: DoubleField;
-*   Use a Field for other types.
-
-### Stored Field
-
-FieldType storedFieldType = new FieldType();
-
-//Set to true if you want to save the value of the entire column
-storedFieldType.setStored(true);
-
-//Set to true if this field's indexed form should be also stored into term vectors.
-storedFieldType.setStoreTermVectors(true);
-storedFieldType.setIndexed(true);
-storedFieldType.setTokenized(false);
-storedFieldType.freeze(); //for locking the changes
-
-### Indexed Field
-
-FieldType indexedFieldType = new FieldType();
-
-//Set to true if this field's indexed form should be also stored into term vectors.
-indexedFieldType.setStoreTermVectors(true);
-
-//Set to true to also store token positions into the term vector for this field.
-indexedFieldType.setStoreTermVectorPositions(true);
-
-indexedFieldType.setIndexed(true); 
-
-//Set to true to tokenize this field's contents via the configured Analyzer.
-indexedFieldType.setTokenized(false);
-
-//for locking the changes
-indexedFieldType.freeze();
+	FieldType indexedFieldType = new FieldType();
+	
+	//Set to true if this field's indexed form should be also stored into term vectors.
+	indexedFieldType.setStoreTermVectors(true);
+	
+	//Set to true to also store token positions into the term vector for this field.
+	indexedFieldType.setStoreTermVectorPositions(true);
+	
+	indexedFieldType.setIndexed(true); 
+	
+	//Set to true to tokenize this field's contents via the configured Analyzer.
+	indexedFieldType.setTokenized(false);
+	
+	//for locking the changes
+	indexedFieldType.freeze();
 
 ## How to viewing the index
+
+
 
 Existing many forms to visualizing the index, we suggest two distinct ways.
 

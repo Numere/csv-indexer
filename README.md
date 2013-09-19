@@ -71,8 +71,8 @@ Exist many forms to extract data of the index, follow some example.
 
 * Using the Lucene
 * In the document's perspective
-	- [Luke - Lucene Index Toolbox](https://code.google.com/p/luke/)
-	- [Opengrok](https://java.net/projects/opengrok/downloads)
-	- [GitHub.com/tarzanek/luke](https://github.com/tarzanek/luke)
+	- Luke 4.4
+		* [Opengrok](https://java.net/projects/opengrok/downloads) binaries
+		* [GitHub.com/tarzanek/luke](https://github.com/tarzanek/luke) sources
 * In the OLAP's approach
-	- [Numere](numere.stela.org.br)
+	- [Numere](http://numere.stela.org.br)

@@ -65,7 +65,7 @@ Also based on the previous points, the creation of a indexed text field can be c
 	//for locking the changes
 	indexedFieldType.freeze();
 
-## How use the data generated
+## How to use the generated data
 
 Exist many forms to extract data of the index, follow some example.
 

@@ -69,16 +69,16 @@ Also based on the previous points, the creation of a indexed text field can be c
 
 After create the index, how to view the information saved?
 
-### Context OLAP
+### OLAP Context
 
 The Numere tool brings the vision OLAP, can be include in your java project.
 
 *   [Numere](numere.stela.org.br)
 
-### Context of Document 
+### Document Context
 
 The Luke tool can be used for visualization of the documents, even as search with grafic interface. 
-*He didn't has support a java project.
 
-*   [Luke - GetOpt.Org](http://www.getopt.org/luke/)
 *   [Luke - Lucene Index Toolbox](https://code.google.com/p/luke/)
+*   [OPENGROK](https://java.net/projects/opengrok/downloads)
+*   [GitHub.com/tarzanek/luke](https://github.com/tarzanek/luke)

@@ -19,19 +19,19 @@ Lucene can also be used for storing data as a schemaless structure, providing fu
 Lucene offers specific field types for an optimized indexing and data retrieve process. The following points show some recommendations (based on Lucene indexing format) to store the data and to give faster retrieval:
 
 * Text fields:
-- ** Use a Field object;
-- ** In case of stored fields:
-- *** Enable term vector storing and indexing properties;
-- *** Disable tokenizing and term vector position storing properties;
-- ** Indexed fields:
-- *** Enable term vector storing, term vector position storing, and indexing properties;
-- *** Disable tokenizing and term storing properties;
+	- ** Use a Field object;
+	- ** In case of stored fields:
+	- *** Enable term vector storing and indexing properties;
+	- *** Disable tokenizing and term vector position storing properties;
+	- ** Indexed fields:
+	- *** Enable term vector storing, term vector position storing, and indexing properties;
+	- *** Disable tokenizing and term storing properties;
 * Numeric fields:
-- ** Use the specific-purpose field type:
-- *** For 4-byte integers: IntField;
-- *** For 8-byte integers: LongField;
-- *** For 4-byte floats: FloatField;
-- *** For 8-byte floats: DoubleField;
+	- ** Use the specific-purpose field type:
+	- *** For 4-byte integers: IntField;
+	- *** For 8-byte integers: LongField;
+	- *** For 4-byte floats: FloatField;
+	- *** For 8-byte floats: DoubleField;
 * Use a Field for other types.
 
 Based on these points, the creation of a stored text field can coded like this:

@@ -71,13 +71,14 @@ After create the index, how to view the information saved?
 
 ### Context OLAP
 
-The tool Numere brings the vision OLAP. This tool can be added in a project java.
+The Numere tool brings the vision OLAP, can be include in your java project.
 
 *   [Numere](numere.stela.org.br)
 
 ### Context of Document 
 
-The tool Luke is used to visualizing the documents belonging to the index.
+The Luke tool can be used for visualization of the documents, even as search with grafic interface. 
+*He didn't has support a java project.
 
 *   [Luke - GetOpt.Org](http://www.getopt.org/luke/)
 *   [Luke - Lucene Index Toolbox](https://code.google.com/p/luke/)

@@ -69,10 +69,10 @@ Also based on the previous points, the creation of a indexed text field can be c
 
 Exist many forms to extract data of the index, follow some example.
 
-* using the Lucene
+* Using the Lucene
 * In the document's perspective
 	- [Luke - Lucene Index Toolbox](https://code.google.com/p/luke/)
 	- [Opengrok](https://java.net/projects/opengrok/downloads)
 	- [GitHub.com/tarzanek/luke](https://github.com/tarzanek/luke)
-* in the OLAP's approach
+* In the OLAP's approach
 	- [Numere](numere.stela.org.br)

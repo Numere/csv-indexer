@@ -65,17 +65,17 @@ Also based on the previous points, the creation of a indexed text field can be c
 	//for locking the changes
 	indexedFieldType.freeze();
 
-## How to view and use the data in the index
+## Visualizing the Index
 
-Existing many forms to visualizing the index, we suggest two distinct ways.
+After create the index, how to view the information saved?
 
-### Vision OLAP
+### Context OLAP
 
 The tool Numere brings the vision OLAP. This tool can be added in a project java.
 
 *   [Numere](numere.stela.org.br)
 
-### Vision the Data
+### Context of Document 
 
 The tool Luke is used to visualizing the documents belonging to the index.
 

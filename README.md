@@ -2,7 +2,7 @@
 
 Generation of the inverted index using the Apache Lucene library from a csv file.
 
-##  Getting Started
+##  How Start
 
 *   Download the sample project;
 
@@ -10,7 +10,7 @@ Generation of the inverted index using the Apache Lucene library from a csv file
 
 *   Download CSV file.
 
-##  GETTING THE CODE
+##  Getting the code
 
 *   git clone git@github.com:numere/csv-indexer.git
 
@@ -24,15 +24,15 @@ Engine generator of inverted index.
 
 ([Apache Lucene](http://lucene.apache.org/core/))
 
-*   lucene-analyzers-common-4.4.0;
-*   lucene-codecs-4.4.0;
-*   lucene-core-4.4.0;
-*   lucene-misc-4.4.0;
-*   lucene-queries-4.4.0;
-*   lucene-queryparser-4.4.0;
-*   lucene-suggest-4.4.0;
+*   lucene-analyzers-common;
+*   lucene-codecs;
+*   lucene-core;
+*   lucene-misc;
+*   lucene-queries;
+*   lucene-queryparser;
+*   lucene-suggest;
 
-Minimum requisite: Lucene-3.2.0
+Minimum requisite: Lucene-3.0.0
 
 ### CSV File 
 
@@ -42,7 +42,7 @@ File public of the District of Columbia regarding the purchase order in year of 
 
 ##	Additional Information
 
-Para melhor entendimento do c�digo e suas propriedades, sugerimos a leitura destes conceitos e utiliza��es.
+For better understanding of the code and its properties, please read these concepts and uses.
 
 ### Fields
 
@@ -101,13 +101,13 @@ Existing many forms to visualizing the index, we suggest two distinct ways.
 
 ### Vision OLAP
 
-The tool Numete brings the vision OLAP. This tool can be added in a project java.
+The tool Numere brings the vision OLAP. This tool can be added in a project java.
 
 *   [Numere](numere.stela.org.br)
 
 ### Vision the Data
 
-The tool 'Luke' is used to visualizing the documents belonging to the index.
+The tool Luke is used to visualizing the documents belonging to the index.
 
 *   [Luke - GetOpt.Org](http://www.getopt.org/luke/)
 *   [Luke - Lucene Index Toolbox](https://code.google.com/p/luke/)

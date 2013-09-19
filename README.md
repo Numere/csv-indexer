@@ -65,20 +65,14 @@ Also based on the previous points, the creation of a indexed text field can be c
 	//for locking the changes
 	indexedFieldType.freeze();
 
-## Visualizing the Index
+## How use the data generated
 
-After create the index, how to view the information saved?
+Exist many forms to extract data of the index, follow some example.
 
-### OLAP Context
-
-The Numere tool brings the vision OLAP, can be include in your java project.
-
-*   [Numere](numere.stela.org.br)
-
-### Document Context
-
-The Luke tool can be used for visualization of the documents, even as search with grafic interface. 
-
-*   [Luke - Lucene Index Toolbox](https://code.google.com/p/luke/)
-*   [OPENGROK](https://java.net/projects/opengrok/downloads)
-*   [GitHub.com/tarzanek/luke](https://github.com/tarzanek/luke)
+* using the Lucene
+* In the document's perspective
+	- [Luke - Lucene Index Toolbox](https://code.google.com/p/luke/)
+	- [Opengrok](https://java.net/projects/opengrok/downloads)
+	- [GitHub.com/tarzanek/luke](https://github.com/tarzanek/luke)
+* in the OLAP's approach
+	- [Numere](numere.stela.org.br)

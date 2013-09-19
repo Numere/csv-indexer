@@ -11,7 +11,7 @@ import java.io.File;
  */
 public class StartLoader {
 
-	private static final String DEFAULT_CSV_FILE = "content/file/ordemCompraColumbia.csv";
+	private static final String DEFAULT_CSV_FILE = "content/file/orderBuyColumbia.csv";
 
 	/**
 	 * Method called when the program is started. It accepts the CSV file path

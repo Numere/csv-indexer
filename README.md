@@ -10,11 +10,11 @@ This project allows the generation of Lucene formatted indexes from a CSV file.
 * Download the Apache Lucene library;
 * Download the 2011 Purchase Orders from the District of Columbia file (available at ([http://data.octo.dc.gov/feeds/pass/archive/pass_2011_CSV.zip](http://data.octo.dc.gov/feeds/pass/archive/pass_2011_CSV.zip))).
 
-### About Lucene indexing and field types
+### About Lucene indexing and Field types
 
 Lucene is a Java-based project that provides indexing and search technology, as well as spellchecking, hit highlighting and advanced analysis/tokenization capabilities. 
 
-Lucene can also be used for storing data as a schemaless structure, providing full text search (including fuzzy and approximation searches) over all the stored data.
+Lucene can also be used to store data as a schemaless structure, providing full text search (including fuzzy and approximation searches) over all the stored data.
 
 Lucene offers specific field types for an optimized indexing and data retrieve process. The following points show some recommendations (based on Lucene indexing format) to store the data and to give faster retrieval:
 
@@ -34,43 +34,43 @@ Lucene offers specific field types for an optimized indexing and data retrieve p
 		* For 8-byte floats: DoubleField;
 * Use a Field for other types.
 
-Based on these points, the creation of a stored text field can coded like this:
+Based on these points, the creation of a stored text field can be coded as follows:
 
 	FieldType storedFieldType = new FieldType();
 	
-	//Set to true if you want to save the value of the entire column
+	//Define as true if you want to save the value of the entire column
 	storedFieldType.setStored(true);
 	
-	//Set to true if this field's indexed form should be also stored into term vectors.
+	//Define as true if this field's indexed form should be also stored into term vectors.
 	storedFieldType.setStoreTermVectors(true);
 	storedFieldType.setIndexed(true);
 	storedFieldType.setTokenized(false);
 	storedFieldType.freeze(); //for locking the changes
 
-Also based on the previous points, the creation of a indexed text field can be coded like this: 
+Also based on the previous points, the creation of a indexed text field can be coded as follows: 
 
 	FieldType indexedFieldType = new FieldType();
 	
-	//Set to true if this field's indexed form should be also stored into term vectors.
+	//Define as true if this field's indexed form should be also stored into term vectors.
 	indexedFieldType.setStoreTermVectors(true);
 	
-	//Set to true to also store token positions into the term vector for this field.
+	//Define as true to store token positions also into the term vector for this field.
 	indexedFieldType.setStoreTermVectorPositions(true);
 	
 	indexedFieldType.setIndexed(true); 
 	
-	//Set to true to tokenize this field's contents via the configured Analyzer.
+	//Define as true to tokenize this field's contents via the configured Analyzer.
 	indexedFieldType.setTokenized(false);
 	
-	//for locking the changes
+	//to lock the changes
 	indexedFieldType.freeze();
 
 ## How to use the generated data
 
-Exist many forms to extract data of the index, follow some example.
+There are many ways to extract data of the index, following are some example.
 
 * Using the Lucene
-* In the document's perspective
+* Into the document's perspective
 	- Luke 4.4
 		* [Opengrok](https://java.net/projects/opengrok/downloads) binaries
 		* [GitHub.com/tarzanek/luke](https://github.com/tarzanek/luke) sources
